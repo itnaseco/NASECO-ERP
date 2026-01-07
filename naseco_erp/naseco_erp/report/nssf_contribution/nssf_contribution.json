@@ -1,0 +1,38 @@
+{
+ "add_total_row": 0,
+ "add_translate_data": 0,
+ "columns": [],
+ "creation": "2025-09-11 15:13:39.414368",
+ "disabled": 1,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letterhead": null,
+ "modified": "2025-09-11 16:13:38.162587",
+ "modified_by": "Administrator",
+ "module": "NASECO ERP",
+ "name": "NSSF Contribution",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT \n    employee AS \"Employee ID\",\n    employee_name AS \"Employee Name\",\n    gross_pay AS \"Gross Earnings\",\n    ROUND(gross_pay * 0.05, 2) AS \"Employee NSSF (5%)\",\n    ROUND(gross_pay * 0.10, 2) AS \"Employer NSSF (10%)\",\n    ROUND(gross_pay * 0.15, 2) AS \"Total NSSF (15%)\",\n    CONCAT(start_date, ' to ', end_date) AS \"Period\"\nFROM `tabSalary Slip`\nWHERE docstatus = 1\nORDER BY employee_name;",
+ "ref_doctype": "Salary Slip",
+ "report_name": "NSSF Contribution",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "Employee"
+  },
+  {
+   "role": "HR Manager"
+  },
+  {
+   "role": "HR User"
+  },
+  {
+   "role": "Employee Self Service"
+  }
+ ],
+ "timeout": 0
+}
