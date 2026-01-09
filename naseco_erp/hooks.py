@@ -243,7 +243,7 @@ app_license = "mit"
 # }
 
 fixtures = [
-    {"dt": "Client Script"},
+    {"dt": "Client Script", "filters": [["module", "=", "NASECO ERP"]]},
     # {"dt": "Salary Structure", "filters": [["name",]]},
     {"dt": "Custom Field", "filters": [["module", "=", "NASECO ERP"]]}
 ]
