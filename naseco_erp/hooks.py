@@ -242,3 +242,8 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+fixtures = [
+    {"dt": "Client Script"},
+    # {"dt": "Salary Structure", "filters": [["name",]]},
+    {"dt": "Custom Field", "filters": [["module", "=", "NASECO ERP"]]}
+]
